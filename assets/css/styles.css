@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+  max-width: max-content;
+  height: auto;
+}
+
+.container {
+  max-width: 970px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.loginWrapper {
+  max-width: 384px;
+  margin: 0 auto;
+  text-align: center;
+}
+.loginWrapper > div:first-child {
+  padding: 40px;
+}
+
+.group {
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.group:not(:first-child) {
+  padding: 20px 40px;
+}
+.group:first-child a {
+  display: block;
+}
+.group a:not(:last-child) {
+  color: #385185;
+}
+.group a:last-child {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0px 12px;
+}
+.inputGroup input {
+  background: #fafafa;
+  background: rgba(var(--b3f,250,250,250),1);
+  border: 1px solid #dbdbdb;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis;
+}
+.inputGroup button {
+  background-color: #0095f6;
+  border-radius: 4px;
+  padding: 5px 9px;
+  border: 0;
+}
+
+.separator {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 0;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  height: 1px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #dbdbdb;
+}
+.separator::before {
+  left: 0;
+}
+.separator::after {
+  right: 0;
+}
+
+.downloadOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 40px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .imageWrapper {
+    display: none;
+  }
+}
